@@ -1,0 +1,44 @@
+package com.talentsprint;
+
+public class Adder {
+
+	public static void main(String args[]) {
+		int num1,num2;
+		if(args.length != 2)
+		{
+			System.out.println("Error");
+			return;
+		}
+		
+		try{
+		num1 = Integer.parseInt(args[0]);
+		num2 = Integer.parseInt(args[1]);
+		}catch(NumberFormatException nFE){
+			System.out.println("Error");
+			return;
+		}
+		
+		if(num1 < 0 || num2 < 0)
+		{
+			System.out.println("Error");
+			return;
+		}
+		
+		
+		
+		System.out.println(getSum(num1,num2));
+	}
+	
+	
+	/**
+	 * this method takes two arguments and returns their sum
+	 * @param num1
+	 * @param num2
+	 * @return
+	 */
+	public static int getSum(int num1, int num2){
+		return(num1 + num2);
+	}
+
+}
+`
